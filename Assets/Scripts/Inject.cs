@@ -10,14 +10,6 @@ public class InjectAttribute : Attribute
 
 public static class MemberInfoExtension
 {
-    public static Attribute GetCustomAttributeEx<T1, T2>(this MemberInfo info, bool inherit)
-    {
-        if(typeof(T1) == typeof(PropertyInfo))
-            return ((PropertyInfo)info)?.GetCustomAttribute(typeof(T2), inherit);
-        if(typeof(T1) == typeof(FieldInfo))
-            return ((FieldInfo)info)?.GetCustomAttribute(typeof(T2), inherit);
-        return default;
-    }
     public static object GetValue<T>(this MemberInfo info, object obj)
     {
         if(typeof(T) == typeof(PropertyInfo))
