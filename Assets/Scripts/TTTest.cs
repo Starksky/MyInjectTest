@@ -1,4 +1,6 @@
-﻿using UnityEngine;public interface ITest
+﻿using UnityEngine;
+
+public interface ITest
 {
     ITest1 test1 { get; set; }
     float test { get; set; }
